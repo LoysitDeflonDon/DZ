@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML, CSS, теги, примеры">
+  <meta name="description" content="Страница со всеми тегами из презентации">
+  <title>Все теги из презентации</title>
+  <link rel="stylesheet" href="style.css"> <!-- внешние стили (можно создать отдельно) -->
+  <style>
+    /* Внутренние стили */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+    .feature-kitten {
+      background-color: #ffe4b5;
+      padding: 10px;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #d2691e;
+    }
+    .deleted {
+      background-color: #ffcccc;
+    }
+    .inserted {
+      background-color: #ccffcc;
+    }
+    /* группировка селекторов */
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    /* вложенный селектор */
+    .container p {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header>
+    <h1>Основы HTML и CSS</h1>
+    <p>Примеры всех тегов из презентации</p>
+    <nav>
+      <ul>
+        <li><a href="#structure">Структура</a></li>
+        <li><a href="#lists">Списки</a></li>
+        <li><a href="#text">Текст</a></li>
+        <li><a href="#css">CSS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Основной контент -->
+  <main>
+
+    <!-- Секция 1: Базовая структура -->
+    <section id="structure">
+      <h2>Структура HTML</h2>
+      <p>Тег <code>&lt;p&gt;</code> — параграф.</p>
+      <p>Это пример <q>короткой цитаты</q> внутри текста.</p>
+      <blockquote>
+        Это длинная цитата. Она может состоять из нескольких абзацев.
+        <footer>— <cite>Источник: презентация</cite></footer>
+      </blockquote>
+      <p>Мысли героя: <i>«Надо бы выучить HTML»</i>.</p>
+      <p><em>Важно:</em> не путайте <i>курсив</i> и <em>акцент</em>.</p>
+      <p><strong>Внимание!</strong> Это важное предупреждение.</p>
+      <p><b>Вводное предложение</b> — привлекает внимание, но не важно.</p>
+      <p>Вода — H<sub>2</sub>O, а площадь — 10 м<sup>2</sup>.</p>
+      <p>Дата: <time datetime="2026-09-01">1 сентября 2026</time>.</p>
+      <p><del class="deleted">Этот текст удалён</del> <ins class="inserted">а этот добавлен</ins>.</p>
+      <p>Специальные символы: &lt; &gt; &amp; &copy; &nbsp; (неразрывный пробел).</p>
+    </section>
+
+    <!-- Секция 2: Списки -->
+    <section id="lists">
+      <h2>Списки</h2>
+
+      <h3>Неупорядоченный список (ul)</h3>
+      <ul>
+        <li>Пункт 1</li>
+        <li>Пункт 2
+          <ul>
+            <li>Вложенный пункт 2.1</li>
+            <li>Вложенный пункт 2.2</li>
+          </ul>
+        </li>
+        <li>Пункт 3</li>
+      </ul>
+
+      <h3>Упорядоченный список (ol)</h3>
+      <ol start="5" reversed type="A">
+        <li>Пятый</li>
+        <li>Четвёртый</li>
+        <li>Третий</li>
+      </ol>
+
+      <h3>Список описаний (dl)</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>Язык гипертекстовой разметки</dd>
+        <dt>CSS</dt>
+        <dd>Каскадные таблицы стилей</dd>
+        <dt>Тег</dt>
+        <dd>Элемент разметки</dd>
+        <dd>Может быть парным или одиночным</dd>
+      </dl>
+    </section>
+
+    <!-- Секция 3: Текст и форматирование -->
+    <section id="text">
+      <h2>Форматирование текста</h2>
+
+      <h3>Преформатированный текст и код</h3>
+      <pre>
+        <code>
+          function hello() {
+            console.log("Hello, world!");
+          }
+        </code>
+      </pre>
+
+      <h3>Акценты и смысловые выделения</h3>
+      <p>Обычный текст, <span class="highlight">выделенный span</span>, и <strong>strong</strong>.</p>
+
+      <h3>Верхний и нижний индекс</h3>
+      <p>Формула Эйнштейна: E = m<sup>2</sup> (но вообще E = mc<sup>2</sup>).</p>
+      <p>Химическая формула: CO<sub>2</sub>.</p>
+    </section>
+
+    <!-- Секция 4: Разделение контента -->
+    <section id="div-span">
+      <h2>div и span</h2>
+      <div style="background-color: #e0f7fa; padding: 10px;">
+        Это блок <code>&lt;div&gt;</code>, в котором может быть много контента.
+        <p>А это <span style="color: red;">span</span> внутри параграфа.</p>
+      </div>
+    </section>
+
+    <!-- Секция 5: aside (боковая панель) -->
+    <aside style="background-color: #f0f0f0; padding: 10px; border-left: 4px solid #ccc;">
+      <h3>Сайдбар</h3>
+      <p>Дополнительная информация, не связанная напрямую с основным контентом.</p>
+    </aside>
+
+    <!-- Секция 6: article -->
+    <article>
+      <h2>Статья</h2>
+      <p>Это самостоятельный фрагмент информации.</p>
+    </article>
+
+  </main>
+
+  <!-- Подвал -->
+  <footer>
+    <p>&copy; 2026. Все примеры из презентации.</p>
+    <p><time datetime="2026-09-01">01.09.2026</time></p>
+  </footer>
+
+</body>
+</html>
